@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "halalmeet",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "halalmeet",
+    "password": "halalmeet",
+    "database": "halalmeet",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

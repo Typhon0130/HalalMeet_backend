@@ -1,0 +1,1937 @@
+{
+	"info": {
+		"_postman_id": "9a86a093-157a-417c-9e97-74e6f79b2edf",
+		"name": "halalmeet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "verifyAuthenticationProcess",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"phoneNumber\": \"13\", \"smsToken\": \"836554\", \"city\": \"Budapest\", \"region\": \"Budapest\", \"country\": \"Hungary\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/auth/verify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"auth",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "onBoardUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA2LCJnZW5kZXIiOm51bGwsInN0YXRlIjoiVkVSSUZJRUQiLCJyb2xlIjoiVVNFUiIsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsImF2YXRhciI6bnVsbCwiYm9ybkF0IjpudWxsLCJzZXJ2aWNlQXJlYSI6MSwiaWF0IjoxNjAwNTQ5NDQ5fQ.jx9ADG3WOdD5S2tchtnlQS6AMK3WvBPz173XwT42uiQ",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "anyadka",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "anyadat",
+									"type": "text"
+								},
+								{
+									"key": "countries",
+									"value": "Hungary,Canada",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "MALE",
+									"type": "text"
+								},
+								{
+									"key": "bornAt",
+									"value": "1994-04-21\n",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "anyadka@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/home/exworm/Downloads/llama.jpg"
+								},
+								{
+									"key": "interests",
+									"value": "[{\"icon\":\"user\",\"name\":\"anyad\"}]",
+									"type": "text"
+								},
+								{
+									"key": "languages",
+									"value": "English,Hungarian,French",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "180cm",
+									"type": "text"
+								},
+								{
+									"key": "highlights",
+									"value": "llroemr ew rewi rew irewporjewiporj wehighlights",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Budapest",
+									"type": "text"
+								},
+								{
+									"key": "region",
+									"value": "Budapest",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "Hungary",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/auth/onboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"auth",
+								"onboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify location",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTk2MzU1MDQ4fQ.upuDNXlpowGy3HcOeUvzSTMCbVGPCKGFJdyCtSOAV6o"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"city\": \"Budapest\", \"region\": \"Budapest\", \"country\": \"Hungary\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/auth/verify-location",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"auth",
+								"verify-location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "initAuthenticationProcess",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"phoneNumber\": \"13\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/auth/init",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"auth",
+								"init"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "image",
+					"item": [
+						{
+							"name": "uploadImages",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTk1OTA0MDh9.FH_7HwWaZkBxBp3Odoy4f5wQyqkPWKydTImFEbCznak",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/exworm/Downloads/llama.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/upload/images",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"upload",
+										"images"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "serveImage",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwic3RhdGUiOiJPTl9CT0FSREVEIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE1OTYyODI3OTd9.9WxGRmyKIGwbMtzFlxQud9ocaK6KwcvXgUvGClg0tjo"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/exworm/Downloads/llama.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/image/e64f83b5-dcf5-453c-9b1f-7f0c277d3310.png",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"image",
+										"e64f83b5-dcf5-453c-9b1f-7f0c277d3310.png"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete Image",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTk1OTA0MDh9.FH_7HwWaZkBxBp3Odoy4f5wQyqkPWKydTImFEbCznak"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/exworm/Downloads/llama.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/image/7d7843cd-8da8-46c3-bb7f-d66aa5fd9b42.png",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"image",
+										"7d7843cd-8da8-46c3-bb7f-d66aa5fd9b42.png"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "me",
+					"item": [
+						{
+							"name": "serveLoggedInUserProfile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTk2ODE4NDh9.lAAfM49VKUPTiSy7Dm0lxlFsmqQce4HpLaqYyL5PO74",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "buyPremium",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwic3RhdGUiOiJPTl9CT0FSREVEIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE1OTYyODI3OTd9.9WxGRmyKIGwbMtzFlxQud9ocaK6KwcvXgUvGClg0tjo"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/buy/premium/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"buy",
+										"premium",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "buyFirstInLine",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwic3RhdGUiOiJPTl9CT0FSREVEIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE1OTYyODI3OTd9.9WxGRmyKIGwbMtzFlxQud9ocaK6KwcvXgUvGClg0tjo"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/buy/first-in-line/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"buy",
+										"first-in-line",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "buyDirectMessage",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwic3RhdGUiOiJPTl9CT0FSREVEIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE1OTYyODI3OTd9.9WxGRmyKIGwbMtzFlxQud9ocaK6KwcvXgUvGClg0tjo"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/buy/direct-message/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"buy",
+										"direct-message",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "serveNotifications",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwic3RhdGUiOiJPTl9CT0FSREVEIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE1OTYyODI3OTd9.9WxGRmyKIGwbMtzFlxQud9ocaK6KwcvXgUvGClg0tjo"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/notifications",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"notifications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteLoggedInUser",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTkzODYzNjB9.6NxTkn1ieR01nl0y26lsDKMAxdzRD3tEEH2FMWzl5jw"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"reason\": \"asdasd\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pauseLoggedInUser",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTg3MjM0Mjl9.W7akVCxtwqgbIV4mzNVGkrIGaV37Z8LMUmnYHLlusi8"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/pause",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"pause"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editLoggedInUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTk1OTA0MDh9.FH_7HwWaZkBxBp3Odoy4f5wQyqkPWKydTImFEbCznak",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"firstName\": \"Anyadka\",\n    \"lastName\": \"asdabasd\",\n    \"gender\": \"MALE\", \n    \"bornAt\": \"2020-01-01\", \n    \"email\": \"asdasd@gmail.com\",\n    \"height\": \"220cm\",\n    \"highLights\": \"asdasdsadas\",\n    \"countries\": [\"Hungary\", \"Canada\"],\n    \"languages\":null,\n    \"interests\": [{ \"name\": \"anyad\", \"icon\": \"user\"}, { \"name\": \"anyad2\", \"icon\": \"users\"}]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change-location",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+									},
+									{
+										"key": "limit",
+										"type": "text",
+										"value": "10",
+										"disabled": true
+									},
+									{
+										"key": "offset",
+										"type": "text",
+										"value": "0",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"city\": null, \"country\": \"Canada\", \"region\": null }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/change-location",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"change-location"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "searchCityByServiceArea",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+									},
+									{
+										"key": "limit",
+										"type": "text",
+										"value": "10",
+										"disabled": true
+									},
+									{
+										"key": "offset",
+										"type": "text",
+										"value": "0",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"city\": \"B\", \"country\": \"hu\"  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/search-city",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"search-city"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "serveServiceAreas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+									},
+									{
+										"key": "limit",
+										"type": "text",
+										"value": "10",
+										"disabled": true
+									},
+									{
+										"key": "offset",
+										"type": "text",
+										"value": "0",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/change-location/service-areas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"change-location",
+										"service-areas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "enable-location-updates",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+									},
+									{
+										"key": "limit",
+										"type": "text",
+										"value": "10",
+										"disabled": true
+									},
+									{
+										"key": "offset",
+										"type": "text",
+										"value": "0",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"city\": \"Anyad\", \"country\": \"anyad\", \"region\": \"anyad\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/enable-location-updates",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"enable-location-updates"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "swipe",
+					"item": [
+						{
+							"name": "serveLoggedInUserLiked",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywic3RhdGUiOiJPTl9CT0FSREVEIiwicm9sZSI6IkFETUlOIiwic2VydmljZUFyZWEiOjEsImlhdCI6MTU5ODExMTI3OH0.w63hQ8_AibjoSbrNWkt4g3HnCwEa2PtulqZQAHVaAQ0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"skip\": 0, \"limit\": 10 }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/match/liked",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"match",
+										"liked"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "serveUnContactedMessages",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+									},
+									{
+										"key": "limit",
+										"value": "10",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "offset",
+										"value": "0",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/un-contacted-matches?limit=10&offset=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"un-contacted-matches"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "serveContactedMessages",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/contacted-matches?limit=10&offset=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"contacted-matches"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "serveLoggedInUserLikedMe",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywic3RhdGUiOiJPTl9CT0FSREVEIiwicm9sZSI6IkFETUlOIiwic2VydmljZUFyZWEiOjEsImlhdCI6MTU5ODExMTI3OH0.w63hQ8_AibjoSbrNWkt4g3HnCwEa2PtulqZQAHVaAQ0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"skip\": 0, \"limit\": 10 }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/match/liked-me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"match",
+										"liked-me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "serveLoggedInUserSuccessfulMatch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywic3RhdGUiOiJPTl9CT0FSREVEIiwicm9sZSI6IkFETUlOIiwic2VydmljZUFyZWEiOjEsImlhdCI6MTU5ODExMTI3OH0.w63hQ8_AibjoSbrNWkt4g3HnCwEa2PtulqZQAHVaAQ0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"skip\": 0, \"limit\": 10 }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/match/successful-match",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"match",
+										"successful-match"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "serveLoggedInUserPassed",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywic3RhdGUiOiJPTl9CT0FSREVEIiwicm9sZSI6IkFETUlOIiwic2VydmljZUFyZWEiOjEsImlhdCI6MTU5ODExMTI3OH0.w63hQ8_AibjoSbrNWkt4g3HnCwEa2PtulqZQAHVaAQ0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"skip\": 0, \"limit\": 10 }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/match/passed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"match",
+										"passed"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "serveWaves",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/waves?limit=10&offet=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"waves"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "offet",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "serveWavesCount",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/me/waves/count",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"me",
+										"waves",
+										"count"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "otherUser",
+					"item": [
+						{
+							"name": "serveUserPublicProfile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTk1OTA0MDh9.FH_7HwWaZkBxBp3Odoy4f5wQyqkPWKydTImFEbCznak"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3030/api/user/10/public-profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"10",
+										"public-profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "blockUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"reason\": \"anyad   ads\", \"reportedUserId\": 100, \"blockUser\": true }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/2/report",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"2",
+										"report"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reportUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"blockedUserId\": 100}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3030/api/user/2/block",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"api",
+										"user",
+										"2",
+										"block"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "language",
+			"item": [
+				{
+					"name": "serveLanguageOptions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/language/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"language",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "serveLanguageFile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/language/Hungarian",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"language",
+								"Hungarian"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "db",
+			"item": [
+				{
+					"name": "reset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3030/api/db/reset",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"db",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "iceBreaker",
+			"item": [
+				{
+					"name": "serveIceBreakers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTgyOTAzOTR9.Vl6zYI8mI0ojtTL-cQtauq30uW9hdPpV4wgnoC0uPtI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3030/api/ice-breaker/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"ice-breaker",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "interest",
+			"item": [
+				{
+					"name": "serveInterests",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTgyOTAzOTR9.Vl6zYI8mI0ojtTL-cQtauq30uW9hdPpV4wgnoC0uPtI"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3030/api/interest/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"interest",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "locationSubscriber",
+			"item": [
+				{
+					"name": "subscribeToLocation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"email\": \"anyadka@gmail.com\", \"city\": \"Washington\", \"country\": \"USA\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/location-subscriber/subscribe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"location-subscriber",
+								"subscribe"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "siteSetting",
+			"item": [
+				{
+					"name": "serveFileSetting",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/site-settings/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"site-settings",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "subscriberPlan",
+			"item": [
+				{
+					"name": "serveSubscriberPlans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/subscriber-plans/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"subscriber-plans",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "directMessagePlan",
+			"item": [
+				{
+					"name": "serveDirectMessagePlans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/direct-message/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"direct-message",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "firstInLinePlan",
+			"item": [
+				{
+					"name": "serveDirectMessagePlans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/first-in-line/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"first-in-line",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "venue",
+			"item": [
+				{
+					"name": "serveVenuesByLocation Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3030/api/venue?lat=47.497913&long=19.040236&limit=10&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"venue"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "47.497913"
+								},
+								{
+									"key": "long",
+									"value": "19.040236"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "serveFeaturedVenuesByLocation",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3030/api/venue/featured?lat=47.497913&long=19.040236&limit=10&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"venue",
+								"featured"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "47.497913"
+								},
+								{
+									"key": "long",
+									"value": "19.040236"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "serveVenueHistories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3030/api/venue/history?limit=10&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"venue",
+								"history"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "joinVenue",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkZlbWFsZSIsImxhc3ROYW1lIjoiSGFsYWwiLCJhdmF0YXIiOiJndXkzLmpwZyIsImxhbmciOiJFbmdsaXNoIiwiYm9ybkF0IjoiMjAwMC0wMS0wMVQwMDowMDowMC4wMDBaIiwic2VydmljZUFyZWEiOjIsImNpdHkiOiJCdWRhcGVzdCIsInJlZ2lvbiI6IkJ1ZGFwZXN0IiwiY291bnRyeSI6Ikh1bmdhcnkiLCJuck9mRGlyZWN0TWVzc2FnZXMiOm51bGwsIm5yT2ZGaXJzdEluTGluZSI6bnVsbCwidmVudWVJZCI6bnVsbCwiaWF0IjoxNjAxMTk4MTQ0fQ.PyIa0NcWmZtDKoe8oys9F0KxWcwVhlB0p2aUjNDhjyE"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3030/api/venue/join/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"venue",
+								"join",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "leaveVenue",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3030/api/venue/leave/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"venue",
+								"leave",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recommendVenue",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE2MDA0MTE3ODl9.8tRDRDVVnN3C-O3uEPPURCDrnRUWNhRlu5LwXtbSzVE"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"placeName\": \"aasd asd pőlace\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/venue/recommend-venue?lat=47.497913&long=19.040236",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"venue",
+								"recommend-venue"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "47.497913"
+								},
+								{
+									"key": "long",
+									"value": "19.040236"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "serveVenueUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3030/api/venue/users?venueId=2&limit=10&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"venue",
+								"users"
+							],
+							"query": [
+								{
+									"key": "venueId",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "serveVenueHistoryUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJBRE1JTiIsImZpcnN0TmFtZSI6IkhhbGFsIiwibGFzdE5hbWUiOiJNZWV0IiwiYXZhdGFyIjoiZ3V5NC5qcGciLCJsYW5nIjoiRW5nbGlzaCIsImJvcm5BdCI6IiswMjAwMDEtMTItMzFUMjM6MDA6MDAuMDAwWiIsInNlcnZpY2VBcmVhIjoxLCJjaXR5IjoiQnVkYXBlc3QiLCJyZWdpb24iOm51bGwsImNvdW50cnkiOiJIdW5nYXJ5IiwibnJPZkRpcmVjdE1lc3NhZ2VzIjpudWxsLCJuck9mRmlyc3RJbkxpbmUiOm51bGwsInZlbnVlSWQiOjEsImlhdCI6MTYwMTE5MjQzMX0.xcZEkmnftYqXAESs96ZPpEzOyd5pIsbMc1mhAu8KDrw"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3030/api/venue/history/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"venue",
+								"history",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "generateGooglePlaces",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTgyOTAzOTR9.Vl6zYI8mI0ojtTL-cQtauq30uW9hdPpV4wgnoC0uPtI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"lat\": \"47.497913\", \"long\": \"19.040236\", \"radius\": \"55000\", \"type\": [\"bar\", \"restaurant\"], \"minprice\": \"0\", \"maxprice\": \"4\", \"rankby\": \"prominence\", \"nrOfResults\": 1 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/admin/create-google-places",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"admin",
+								"create-google-places"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createNewNotifications",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTgyOTAzOTR9.Vl6zYI8mI0ojtTL-cQtauq30uW9hdPpV4wgnoC0uPtI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"userId\": \"1\", \"types\": [\"MOBILE_OS\"], \"message\": \"asdasd\", \"subject\": \"asd12321\"  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/admin/create-new-notifications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"admin",
+								"create-new-notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transformGooglePlacesToVenues",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAyLCJzdGF0ZSI6Ik9OX0JPQVJERUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE1OTgyOTAzOTR9.Vl6zYI8mI0ojtTL-cQtauq30uW9hdPpV4wgnoC0uPtI",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3030/api/admin/google-places-to-venues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"admin",
+								"google-places-to-venues"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "c14cf29b-b88f-4628-8a8b-39b627e50b8c",
+			"key": "localhost",
+			"value": "localhost:3030"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

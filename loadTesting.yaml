@@ -1,0 +1,19 @@
+
+
+config:
+  target: https://halalmeet.ca
+#  target: http://localhost:3030
+  socketio:
+    query: "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJVU0VSIiwic2VydmljZUFyZWEiOjEsInZlcmlmaWNhdGlvblN0YXR1cyI6IldBSVRJTkdfRk9SX1ZFUklGSUNBVElPTiIsImlhdCI6MTYxOTExMDAzNX0.EFaCqNBm0x-QnpcxwbBPG7qcbkHezvYPfrgpiOMghcE"
+  phases:
+    - duration: 10
+      arrivalRate: 10
+scenarios:
+  - engine: socketio
+    flow:
+      - emit:
+          channel: find-possible-matches
+          data: {minBornAt: 35}
+#      - emit:
+#          channel: find-contacted-matches
+#          data: { limit: 10 }
