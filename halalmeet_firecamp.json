@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "__export_time": 1602840862767,
+    "__export_app": "firecamp_v1.4.4",
+    "__export_version": 1
+  },
+  "project": {
+    "name": "halalmeet"
+  },
+  "environment_snippets": [
+    {
+      "name": "Production",
+      "is_global": false
+    },
+    {
+      "name": "Development",
+      "is_global": false,
+      "is_reserved": true
+    },
+    {
+      "name": "Staging",
+      "is_global": false
+    }
+  ],
+  "requests": [
+    {
+      "name": "halal",
+      "url": "http://localhost:3030",
+      "config": {
+        "path": "",
+        "forceNew": false,
+        "transports": [
+          {
+            "name": "Polling",
+            "enable": true
+          },
+          {
+            "name": "WebSocket",
+            "enable": true
+          }
+        ],
+        "query": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZ2VuZGVyIjoiTUFMRSIsInN0YXRlIjoiT05fQk9BUkRFRCIsInJvbGUiOiJQUkVNSVVNX1VTRVIiLCJzZXJ2aWNlQXJlYSI6MSwiaWF0IjoxNjAyODM4MTY3fQ.9cL2QTZzz0LDyE_9_Pk9Ody7CZWFjHsTN8uPWDI1p8w",
+            "disable": false
+          },
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA5LCJnZW5kZXIiOm51bGwsInN0YXRlIjoiVkVSSUZJRUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE2MDI4NDAzNDR9.6ggRsVVXGy22AZ5OrVI4OZRAokJ3onzCOFVnlSUo3gI",
+            "disable": false
+          },
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEwLCJnZW5kZXIiOm51bGwsInN0YXRlIjoiVkVSSUZJRUQiLCJyb2xlIjoiVVNFUiIsInNlcnZpY2VBcmVhIjoxLCJpYXQiOjE2MDI4NDAzODZ9.4AlHnjOQgr7ka-M4LHS7i_N1UE-Ua8HACU8Lx5stxrg",
+            "disable": false
+          }
+        ],
+        "headers": []
+      },
+      "description": "",
+      "type": "socketio",
+      "listeners": [
+        {
+          "name": "un-contacted-matches",
+          "listen": false
+        },
+        {
+          "name": "direct-message-not-required",
+          "listen": false
+        },
+        {
+          "name": "notification",
+          "listen": false
+        },
+        {
+          "name": "incoming-message",
+          "listen": false
+        },
+        {
+          "name": "prior-messages",
+          "listen": false
+        },
+        {
+          "name": "contacted-matches",
+          "listen": false
+        },
+        {
+          "name": "possible-matches",
+          "listen": false
+        },
+        {
+          "name": "server-message",
+          "listen": false
+        }
+      ],
+      "emitters": [
+        {
+          "name": "join-conversation",
+          "bodies": [
+            {
+              "title": "10/16/2020, 11:27:31 AM",
+              "args": [
+                "{ \"receiverId\": 1 }"
+              ]
+            },
+            {
+              "title": "10/16/2020, 11:27:36 AM",
+              "args": [
+                "{ \"receiverId\": 2 }"
+              ]
+            },
+            {
+              "title": "10/16/2020, 11:27:39 AM",
+              "args": [
+                "{ \"receiverId\": 3 }"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "do-match",
+          "bodies": [
+            {
+              "title": "10/16/2020, 11:30:41 AM",
+              "args": [
+                "{ \"userId\": 1, \"liked\": true, \"type\": \"SWIPE\" }"
+              ]
+            },
+            {
+              "title": "10/16/2020, 11:30:49 AM",
+              "args": [
+                "{ \"userId\": 1, \"liked\": false, \"type\": \"SWIPE\" }"
+              ]
+            },
+            {
+              "title": "10/16/2020, 11:31:21 AM",
+              "args": [
+                "{ \"userId\": 1, \"liked\": true, \"type\": \"WAVE\", \"venueId\": 1, \"venueName\": \"anyad\" }"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "send-message",
+          "bodies": [
+            {
+              "title": "10/16/2020, 11:32:36 AM",
+              "args": [
+                "{ \"receiverId\": 1, \"text\": \"csa\", \"isDirectMessage\": \"true\", \"venueId\": 1  }"
+              ]
+            },
+            {
+              "title": "10/16/2020, 11:32:48 AM",
+              "args": [
+                "{ \"receiverId\": 1, \"text\": \"csaaaa\"  }"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "find-possible-matches",
+          "bodies": [
+            {
+              "title": "10/16/2020, 11:29:47 AM",
+              "args": [
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

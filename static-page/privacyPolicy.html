@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>HalalMeet.ca</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+<div id="wrapper">
+    <div id="bg"></div>
+    <div id="overlay"></div>
+    <div id="main">
+        <!-- Header -->
+        <header id="header">
+            <div id="termsAndConditions">
+                <div style="font-size: 26px; font-weight: normal;">Halal Meet Privacy Policy</div>
+            </div>
+        </header>
+        <button onclick="window.location = 'https://halalmeet.ca/'" style="position: absolute; background: #E2DAD9; font-weight: bold; font-size: 16px; border: 0px solid black; border-radius: 10px; width: 80px; height: 60px; cursor: pointer; top: 0; left: 0;">
+            <img src="https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-house-icon-png-image_695726.jpg" style="width: 30px; height: 30px;" alt="back">
+            Home
+        </button>
+        <!-- Footer -->
+        <footer id="footer">
+            <span class="copyright"><a href="https://halalmeet.ca/">&copy; 2020 HalalMeet Inc.</a></span>
+            <div style="position: absolute; bottom: -40px; right: 50px; text-align:right;"><a href="mailto:support@halalmeet.ca">Contact</a></div>
+            <div id="terms" style="position: absolute; cursor: pointer; bottom: -40px; right: 130px; text-align:right;"><a href="https://halalmeet.ca/terms-and-conditions">Terms and Services</a></div>
+            <div id="privacyPolicy" style="position: absolute; cursor: pointer; bottom: -40px; right: 320px; text-align:right;"><a href="https://halalmeet.ca/privacy-policy">Privacy Policy</a></div>
+        </footer>
+    </div>
+</div>
+<script>
+  window.onload = function() { document.body.classList.remove('is-preload'); }
+  window.ontouchmove = function() { return false; }
+  window.onorientationchange = function() { document.body.scrollTop = 0; }
+  fetch('https://halalmeet.ca/api/site-settings/') // Call the fetch function passing the url of the API as a parameter
+    .then(async function(data) {
+      let settings = await data.json()
+      let element = document.getElementById('termsAndConditions')
+      element.insertAdjacentHTML( 'beforeend', settings.privacyPolicy);
+    })
+    .catch(function(error) {
+      console.log(error)
+    });
+</script>
+</body>
+</html>
